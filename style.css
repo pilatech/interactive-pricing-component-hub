@@ -95,10 +95,76 @@ body {
 .card__range-input {
  order: -1;
  margin-bottom: 3rem;
- appearance: none;
- background: var(--clr-empty-slider);
- border-radius: 50vmin;
 }
+
+/*Range input styles starts here */
+/* source: https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/
+ still have a lot to understand on this one
+*/
+
+input[type="range"] {
+ -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]:focus {
+outline: none;
+}
+
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+ background-color: var(--clr-full-slider);
+ border-radius: 50vmin;
+ height: 1.1rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+ appearance: none;
+ margin-top: -12px; /* Centers thumb on the track */
+
+ /*custom styles*/
+ background: url(images/icon-slider.svg), linear-gradient(var(--clr-slider), var(--clr-slider));
+ background-repeat: no-repeat;
+ background-position: center;
+ box-shadow: 0 1rem 2rem hsla(174, 76%, 80%, 0.686);
+ height: 4rem;
+ width: 4rem;
+ border-radius: 50%;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {  
+ box-shadow: 0 1rem 4rem hsla(174, 86%, 45%, 0.47)
+}
+
+/******** Firefox styles ********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+ background-color: var(--clr-full-slider);
+ border-radius: 0.5rem;
+ height: 1.2rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+ border: none; 
+ background: url(images/icon-slider.svg), linear-gradient(var(--clr-slider), var(--clr-slider));
+ background-repeat: no-repeat;
+ background-position: center;
+ box-shadow: 0 1rem 2rem hsla(174, 76%, 80%, 0.686);
+ height: 4rem;
+ width: 4rem;
+ border-radius: 50%;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+ box-shadow: 0 1rem 4rem hsla(174, 86%, 45%, 0.47)
+}
+/*ends here */
 
 .card__package-switch {
  display: flex;
@@ -142,8 +208,6 @@ body {
  transform: translateY(-50%) translateX(calc(100% + 3px));
 }
 
-
-
 .card__discount {
  background: var(--clr-discount-bg);
  color: var(--clr-discount-text);
@@ -178,8 +242,6 @@ body {
  width: 60%;
  cursor: pointer;
 }
-
-
 
 @media(min-width: 1200px){
 
