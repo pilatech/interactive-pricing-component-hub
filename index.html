@@ -6,28 +6,56 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Interactive pricing component</title>
 
 </head>
 <body>
+  <header class="intro">
+   <h1 class="title">Simple, traffic-based pricing</h1>
+   <p class="intro__text">
+    Sign-up for our 30-day trial. No credit card required. 
+   </p>
+  </header>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
+  <article class="card">
+    <header class="card__content">
+     <h2 class="card__statistics">100k pageviews</h2>
+     <p class="card__price"><strong class="card__amount">$16</strong><small class="card__period"> / month</small></p>
+     <input type="range" min="0" max="4" value="0" name="package" id="package" class="card__range-input">
+     <p class="card__package-switch">
+      Monthly Billing
+      <label class="checkbox">
+        <input type="checkbox" name="changePackage" id="changePackage"
+        class="checkbox__check">
+        <span class="checker-circle"></span>
+      </label>
+      Yearly Billing
+      <small class="card__discount">
+       -25%
+      </small>
+     </p>
+    </header>
+    <footer class="card__footer">
+      <ul class="card__list">
+       <li class="card__list-item">
+        Unlimited websites
+       </li>
+       <li class="card__list-item">
+        100% data ownership
+       </li>
+       <li class="card__list-item">
+        Email reports
+       </li>
+      </ul>
+      <button class="btn">Start my trial</button>
+    </footer>
+  </article>
   <script src="script.js"></script>
 </body>
 </html>
