@@ -201,6 +201,7 @@ input[type="range"]:focus::-moz-range-thumb {
 
 
 .checkbox__check {
+ --WebKit-appearance: none;
  appearance: none;
 }
 
