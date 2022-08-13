@@ -48,7 +48,7 @@ Styling range input element - and it's a pain :). I need to go deeper into learn
 
 ### Useful resources
 
-- [An article on Smashing Magazine](https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/) - Had a head-start into styling the range input element
+- [An article on Smashing Magazine](https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/) - Gave me a head-start into styling the range input element
 
 ## Author
 
